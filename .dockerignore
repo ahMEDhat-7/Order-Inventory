@@ -1,0 +1,15 @@
+target/
+*.class
+*.jar
+*.war
+*.ear
+.git/
+.github/
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+.factorypath
+.vscode/
+docker-compose.yml
