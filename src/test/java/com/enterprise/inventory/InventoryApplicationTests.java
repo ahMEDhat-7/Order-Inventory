@@ -1,13 +1,10 @@
 package com.enterprise.inventory;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class InventoryApplicationTests {
+class InventoryApplicationTests extends AbstractIntegrationTest {
 
-	@Test
-	void contextLoads() {
-	}
-
+    @Test
+    void contextLoads() {
+    }
 }
