@@ -1,0 +1,14 @@
+# Set default behavior to handle line endings automatically
+* text=auto
+
+# Enforce Unix-style LF line endings for shell scripts and code
+/mvnw text eol=lf
+*.sh text eol=lf
+*.java text eol=lf
+*.xml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+
+# Enforce Windows-style CRLF line endings for Windows scripts
+*.cmd text eol=crlf
+*.bat text eol=crlf
