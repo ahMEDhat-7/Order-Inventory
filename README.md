@@ -79,7 +79,7 @@ The system implements a classic **Layered Architecture (N-Tier)**:
 - **Flyway Migrations** — Versioned SQL schema management (`V1__init_schema.sql`)
 - **Global Exception Handling** — `@RestControllerAdvice` with structured error responses
 - **Swagger UI** — Interactive API documentation at `/swagger-ui.html`
-- **Docker** — Multi-stage Dockerfile for API image, docker-compose for full stack
+- **Docker** — Multi-stage Dockerfile for API image, docker compose for full stack
 - **CI/CD** — GitHub Actions pipeline: compile → test → package
 
 ---
@@ -91,7 +91,7 @@ inventory/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml                          # GitHub Actions CI pipeline
-├── docker-compose.yml                      # PostgreSQL + Redis + App orchestration
+├── docker compose.yml                      # PostgreSQL + Redis + App orchestration
 ├── Dockerfile                              # Multi-stage build for API
 ├── pom.xml                                 # Maven dependencies and plugins
 └── src/
@@ -171,7 +171,7 @@ cd Order-Inventory
 ### 2. Start infrastructure (PostgreSQL + Redis)
 
 ```bash
-docker-compose up -d postgres redis
+docker compose up -d postgres redis
 ```
 
 ### 3. Run the application
@@ -187,7 +187,7 @@ Open in browser: [http://localhost:8080/swagger-ui.html](http://localhost:8080/s
 ### 5. Run with Docker Compose (full stack)
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ---
@@ -509,13 +509,13 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 ```bash
 # Start full stack
-docker-compose up --build
+docker compose up --build
 
 # Start only infrastructure
-docker-compose up -d postgres redis
+docker compose up -d postgres redis
 
 # Stop all
-docker-compose down
+docker compose down
 ```
 
 ---
